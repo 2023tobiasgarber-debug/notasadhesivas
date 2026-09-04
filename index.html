@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anotador & Conversor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="notebook">
+    <div class="header">
+      <h1>MI ANOTADOR & CONVERSOR DUAL</h1>
+    </div>
+
+    <div class="content">
+      <div class="section section-left">
+        <div class="section-title">
+          <i>💵</i> SECCIÓN 1: CONVERSIÓN
+        </div>
+
+        <div class="input-group">
+          <label for="arsAmount">Monto en Pesos (ARS)</label>
+          <div class="input-wrapper">
+            <span>$</span>
+            <input type="number" id="arsAmount" value="50000" placeholder="0">
+          </div>
+        </div>
+
+        <div class="rates-box">
+          <div class="rate-input">
+            <label for="usdRate">Cotización USD</label>
+            <div class="input-wrapper">
+              <span>$</span>
+              <input type="number" id="usdRate" value="1370">
+            </div>
+          </div>
+          <div class="rate-input">
+            <label for="eurRate">Cotización EUR</label>
+            <div class="input-wrapper">
+              <span>$</span>
+              <input type="number" id="eurRate" value="1610">
+            </div>
+          </div>
+        </div>
+
+        <div class="results-card">
+          <div class="result-item">
+            <span class="result-label">Dólares (USD):</span>
+            <span class="result-value" id="usdResult">$0.00</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Euros (EUR):</span>
+            <span class="result-value" id="eurResult">€0.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section-right">
+        <div class="section-title">
+          <i>📝</i> SECCIÓN 2: ANOTACIONES
+        </div>
+
+        <div class="note-input-container">
+          <div class="input-wrapper" style="width: 100%;">
+            <input type="text" id="noteInput" placeholder="Escribe una nota..." style="padding-left: 14px;">
+          </div>
+          <button class="btn-add" id="btnAdd">+</button>
+        </div>
+
+        <ul class="notes-list" id="notesList">
+          <li class="note-item">
+            <span class="note-text">Pago de servicios del mes</span>
+            <button class="btn-delete">×</button>
+          </li>
+          <li class="note-item">
+            <span class="note-text">Presupuesto de compras</span>
+            <button class="btn-delete">×</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
